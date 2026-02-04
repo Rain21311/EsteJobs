@@ -1,4 +1,3 @@
-/* Slide transition for landing and main app */
 .slide-container {
   position: relative;
   width: 100vw;
@@ -90,16 +89,10 @@
 
 /* Hero Section */
 .job-board-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  padding: 80px 24px 60px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5f2c82 0%, #49a09d 100%);
   color: white;
 }
+
 :root.dark .job-board-hero {
   background: linear-gradient(135deg, #434343 0%, #000000 100%);
 }
@@ -897,3 +890,4 @@ body.mainApp-active #exitToHome {
     grid-template-columns: 1fr !important;
   }
 }
+
