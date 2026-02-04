@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jobly — Job Portal Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" id="joblyBrand" style="display:flex;align-items:center;gap:10px;">
+      <span style="font-size:20px;font-weight:700;color:var(--accent);">Jobly</span>
+    </div>
+    <div class="top-actions">
+      <button id="themeToggle" class="icon-btn" title="Toggle dark mode">🌓</button>
+      <div id="authArea"></div>
+    </div>
+  </header>
+
+  <div class="slide-container">
+    <!-- Job Board Landing Page -->
+    <div id="jobBoardHome" class="job-board-home slide-page home center active">
+      <section class="job-board-hero">
+        <div class="hero-content">
+          <h1>Find Your Dream Job</h1>
+          <p class="hero-sub">Discover top opportunities from the best companies. Search, save, and apply in one place.</p>
+          <form id="heroSearchForm" class="hero-search-form">
+            <input id="heroSearchInput" type="text" placeholder="Search job title, company, or keyword..." />
+            <button type="submit" class="btn primary">Search Jobs</button>
+          </form>
+        </div>
+        <div class="hero-image">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.Zjw87n1xnFlnnIq83VfavAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Job board hero" />
+        </div>
+      </section>
+      <section class="job-board-highlights">
+        <h2>Why use Jobly?</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card" data-highlight="recommend" tabindex="0">
+            <span class="highlight-icon">✅</span>
+            <h3>Recommended Jobs</h3>
+            <p>See top picks and trending jobs tailored for you. Get hired faster with personalized recommendations!</p>
+          </div>
+          <div class="highlight-card" data-highlight="companies" tabindex="0">
+            <span class="highlight-icon">💼</span>
+            <h3>Top Companies</h3>
+            <p>Browse jobs from leading employers and startups.</p>
+          </div>
+          <div class="highlight-card" data-highlight="save" tabindex="0">
+            <span class="highlight-icon">⭐</span>
+            <h3>Save & Apply</h3>
+            <p>Save your favorite jobs and apply with one click.</p>
+          </div>
+          <div class="highlight-card" data-highlight="privacy" tabindex="0">
+            <span class="highlight-icon">🔒</span>
+            <h3>Privacy First</h3>
+            <p>Your data stays on your device. No tracking, ever.</p>
+          </div>
+        </div>
+        <!-- Highlight Modals -->
+        <div id="highlightModal" class="modal hidden" aria-hidden="true">
+          <div class="modal-card" id="highlightModalCard">
+            <button id="closeHighlightModal" class="close">✕</button>
+            <div id="highlightModalContent"></div>
+          </div>
+        </div>
+      </section>
+      <div class="job-board-cta">
+        <button id="enterJobBoard" class="btn primary">Apply Now</button>
+        <div class="promo-words" style="margin-top:38px;font-size:1.18em;color:var(--accent);font-weight:500;text-align:center;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.7;">
+          Unlock your future today!<br>
+          Apply to top jobs and get hired faster with Jobly.<br>
+          <span style="font-size:1em;color:var(--muted);font-weight:400;display:block;margin-top:10px;">
+            Take the next step in your career journey. Discover thousands of opportunities, connect with leading companies, and let your talent shine. Your dream job is just a click away—start your success story now!<br>
+            <span style="display:block;margin-top:8px;">No experience? No problem! Jobly connects you to roles for all backgrounds and skill levels. Don’t wait—your next big opportunity is waiting for you. Join Jobly and open doors to a brighter tomorrow!</span>
+          </span>
+        </div>
+      </div>
+      <div style="height:64px;"></div>
+    </div>
+
+    <!-- Main App Container -->
+    <main class="container slide-page main to-right" id="mainApp" style="position:relative;">
+      <header class="mainapp-topbar" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0 8px 0;"></header>
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li style="display:flex;align-items:center;gap:16px;">
+              <span style="display:flex;align-items:center;gap:8px;">
+                <span data-tab="jobs" class="active" style="cursor:pointer;font-weight:500;">All Jobs</span>
+              </span>
+            </li>
+            <li data-tab="local" class="">Local Jobs</li>
+            <li data-tab="featured">Featured Job</li>
+            <li data-tab="saved" class="auth-only">Saved</li>
+            <li data-tab="helpprivacy">Help & Support</li>
+            <li data-tab="settingsprivacy">Settings & Privacy</li>
+            <li data-tab="applications" class="auth-only">Applications</li>
+            <li data-tab="profile" class="auth-only">Profile</li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="content">
+        <!-- Jobs -->
+        <div id="tab-jobs" class="tab-pane active">
+          <div class="toolbar">
+            <input id="searchInput" placeholder="Search job title or company..." />
+          </div>
+          <div id="jobsList" class="cards"></div>
+        </div>
+        <!-- Local Jobs Tab -->
+        <div id="tab-local" class="tab-pane">
+          <h2>Local Jobs</h2>
+          <div id="localJobsList" class="cards"></div>
+        </div>
+        <!-- Featured Job Tab -->
+        <div id="tab-featured" class="tab-pane">
+          <h2>Featured Job</h2>
+          <div id="featuredJobPane" class="cards"></div>
+        </div>
+        <!-- Saved Tab -->
+        <div id="tab-saved" class="tab-pane active">
+          <h2>Saved Jobs</h2>
+          <div id="savedList" class="cards"></div>
+        </div>
+        <!-- Applications Tab -->
+        <div id="tab-applications" class="tab-pane">
+          <h2>Applications</h2>
+          <div id="applicationsList" class="cards"></div>
+          <!-- Application Details Modal -->
+          <div id="applicationDetailsModal" class="modal hidden" aria-hidden="true">
+            <div class="modal-card" id="applicationDetailsCard">
+              <button id="closeApplicationDetails" class="close">✕</button>
+              <div id="applicationDetailsContent"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Profile Tab -->
+        <div id="tab-profile" class="tab-pane">
+          <h2>Your Profile</h2>
+          <div class="profile-header" style="display:flex;align-items:center;gap:16px;justify-content:space-between;">
+            <div style="display:flex;align-items:center;gap:16px;position:relative;">
+              <div style="position:relative;display:inline-block;">
+                <img id="avatarPreview" class="avatar" src="" alt="avatar" style="display:block;" />
+                <label for="avatarInput" style="position:absolute;bottom:6px;right:6px;cursor:pointer;background:rgba(0,0,0,0.6);border-radius:50%;padding:6px 8px;display:flex;align-items:center;gap:4px;">
+                  <span style="color:#fff;font-size:1.1em;">✎</span>
+                  <span style="color:#fff;font-size:0.9em;">Edit</span>
+                  <input id="avatarInput" type="file" accept="image/*" style="display:none;" />
+                </label>
+              </div>
+              <span id="profileNameDisplay" style="font-size:1.2em;font-weight:600;"></span>
+            </div>
+          </div>
+          <form id="profileForm" class="form-card">
+            <label>
+              Full name
+              <input id="profileName" required />
+            </label>
+            <label>
+              Email
+              <input id="profileEmail" type="email" required />
+            </label>
+            <label>
+              Contact
+              <input id="profileContact" type="text" />
+            </label>
+            <label>
+              Address
+              <input id="profileAddress" type="text" />
+            </label>
+            <label>
+              Gender
+              <select id="profileGender">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label>
+              Bio
+              <textarea id="profileBio" rows="3"></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Save</button>
+              <button id="deleteAccount" type="button" class="btn danger">Delete Account</button>
+            </div>
+          </form>
+        </div>
+        <!-- Help Tab -->
+        <div id="tab-helpprivacy" class="tab-pane">
+          <h2>Help & Support</h2>
+          <div class="toolbar" style="margin-bottom:18px;">
+            <input id="helpSearchInput" placeholder="Search help or FAQ..." style="width:100%;max-width:400px;" />
+          </div>
+          <div id="faqsList" style="max-width:600px;margin:0 auto 24px auto;"></div>
+          <div id="faqSteps" class="help-steps" style="display:none;"></div>
+        </div>
+        <!-- Settings Tab -->
+        <div id="tab-settingsprivacy" class="tab-pane">
+          <h2>Settings & Privacy</h2>
+          <div id="settingsOptionsList" style="max-width:400px;margin:18px auto 0 auto;display:flex;justify-content:center;">
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;width:100%;">
+              <!-- Remove or comment out this option -->
+              <!-- <li><button class="settings-option-btn" data-settings="password" style="width:100%;text-align:left;padding:10px 14px;border-radius:8px;border:none;background:var(--card);box-shadow:var(--shadow);font-size:1em;cursor:pointer;">Change Password</button></li> -->
+              <li><button class="settings-option-btn" data-settings="notif" style="width:100%;text-align:left;padding:10px 14px;border-radius:8px;border:none;background:var(--card);box-shadow:var(--shadow);font-size:1em;cursor:pointer;">Notification Preferences</button></li>
+              <li><button class="settings-option-btn" data-settings="privacy" style="width:100%;text-align:left;padding:10px 14px;border-radius:8px;border:none;background:var(--card);box-shadow:var(--shadow);font-size:1em;cursor:pointer;">Privacy Controls</button></li>
+              <li><button class="settings-option-btn" data-settings="addaccount" style="width:100%;text-align:left;padding:10px 14px;border-radius:8px;border:none;background:var(--card);box-shadow:var(--shadow);font-size:1em;cursor:pointer;">Add Account</button></li>
+              <li><button class="settings-option-btn" data-settings="switchaccount" style="width:100%;text-align:left;padding:10px 14px;border-radius:8px;border:none;background:var(--card);box-shadow:var(--shadow);font-size:1em;cursor:pointer;">Switch Account</button></li>
+            </ul>
+          </div>
+          <div id="settingsContent" style="margin-top:24px;text-align:center;"></div>
+        </div>
+        <!-- Job Details Modal -->
+        <div id="jobDetailsModal" class="modal hidden" aria-hidden="true">
+          <div class="modal-card job-details-card">]
+            <button id="closeJobDetails" class="close">✕</button>
+            <div id="jobDetailsContent"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Login / Signup Modal -->
+    <div id="authModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-card">
+        <button id="closeAuth" class="close">✕</button>
+        <div class="auth-tabs">
+          <button data-mode="login" class="active">Log in</button>
+          <button data-mode="signup">Sign up</button>
+        </div>
+        <form id="authForm" class="form-card">
+          <label>
+            Email
+            <input id="authEmail" type="email" required />
+          </label>
+          <label>
+            Password
+            <input id="authPassword" type="password" required minlength="6" />
+          </label>
+          <div id="signupExtra" class="hidden">
+            <label>
+              Full name
+              <input id="authName" />
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary" id="authSubmit">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Jobly Prototype</div>
+      <div class="small">Local demo — no backend</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
