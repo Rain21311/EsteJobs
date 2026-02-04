@@ -20,6 +20,9 @@
   <div class="slide-container">
     <!-- Job Board Landing Page -->
     <div id="jobBoardHome" class="job-board-home slide-page home center active">
+      <div style="position:absolute;top:12px;right:100px;display:flex;gap:8px;">
+        <button id="switchToEmployer" class="btn" style="font-size:0.9em;">I'm Hiring</button>
+      </div>
       <section class="job-board-hero">
         <div class="hero-content">
           <h1>FIND THE JOB THAT FITS YOUR LIFE</h1>
@@ -256,6 +259,150 @@
       </section>
     </main>
 
+    <!-- Employer Portal -->
+    <div id="employerPortal" class="slide-page main to-right" style="position:relative;">
+      <header class="mainapp-topbar" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0 8px 0;">
+        <h2 style="margin:0;">Employer Portal</h2>
+        <button id="backToJobSeeker" class="btn" style="font-size:0.9em;">Back to Job Board</button>
+      </header>
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li data-tab="pricing" class="active" style="cursor:pointer;font-weight:500;">Pricing Plans</li>
+            <li data-tab="dashboard" class="auth-only" style="cursor:pointer;">Dashboard</li>
+            <li data-tab="my-subscription" class="auth-only" style="cursor:pointer;">My Subscription</li>
+            <li data-tab="post-job" class="auth-only" style="cursor:pointer;">Post Job</li>
+            <li data-tab="candidates" class="auth-only" style="cursor:pointer;">View Candidates</li>
+            <li data-tab="employer-profile" class="auth-only" style="cursor:pointer;">Company Profile</li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="content">
+        <!-- Pricing Tab -->
+        <div id="tab-pricing" class="tab-pane active">
+          <h2>Subscription Plans</h2>
+          <p class="muted" style="margin-bottom:24px;">Choose a plan that fits your hiring needs. Access detailed candidate profiles and advanced hiring tools.</p>
+          <div id="pricingGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0;">
+          </div>
+        </div>
+
+        <!-- Dashboard Tab -->
+        <div id="tab-dashboard" class="tab-pane">
+          <h2>Dashboard</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:20px 0;">
+            <div class="card" style="padding:20px;">
+              <div style="font-size:2em;font-weight:bold;color:var(--accent);" id="activeJobs">0</div>
+              <div class="muted">Active Job Postings</div>
+            </div>
+            <div class="card" style="padding:20px;">
+              <div style="font-size:2em;font-weight:bold;color:var(--accent);" id="totalApplications">0</div>
+              <div class="muted">Total Applications</div>
+            </div>
+            <div class="card" style="padding:20px;">
+              <div style="font-size:2em;font-weight:bold;color:var(--accent);" id="candidatesViewed">0</div>
+              <div class="muted">Candidates Viewed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Subscription Tab -->
+        <div id="tab-my-subscription" class="tab-pane">
+          <h2>My Subscription</h2>
+          <div id="subscriptionDetails" class="form-card" style="max-width:600px;margin:20px auto;"></div>
+        </div>
+
+        <!-- Post Job Tab -->
+        <div id="tab-post-job" class="tab-pane">
+          <h2>Post a New Job</h2>
+          <form id="postJobForm" class="form-card" style="max-width:600px;margin:20px auto;">
+            <label>
+              Job Title
+              <input id="jobTitle" required />
+            </label>
+            <label>
+              Job Description
+              <textarea id="jobDesc" rows="4" required></textarea>
+            </label>
+            <label>
+              Location
+              <input id="jobLocation" required />
+            </label>
+            <label>
+              Job Type
+              <select id="jobType" required>
+                <option value="">Select</option>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="contract">Contract</option>
+                <option value="remote">Remote</option>
+              </select>
+            </label>
+            <label>
+              Salary Range
+              <input id="jobSalary" type="text" placeholder="e.g., $50,000 - $70,000" />
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Post Job</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- View Candidates Tab -->
+        <div id="tab-candidates" class="tab-pane">
+          <h2>Browse Candidates</h2>
+          <div class="toolbar">
+            <input id="candidateSearch" placeholder="Search candidates..." />
+          </div>
+          <div id="candidatesList" class="cards"></div>
+        </div>
+
+        <!-- Employer Profile Tab -->
+        <div id="tab-employer-profile" class="tab-pane">
+          <h2>Company Profile</h2>
+          <form id="employerProfileForm" class="form-card" style="max-width:600px;margin:20px auto;">
+            <label>
+              Company Name
+              <input id="companyName" required />
+            </label>
+            <label>
+              Company Email
+              <input id="companyEmail" type="email" required />
+            </label>
+            <label>
+              Website
+              <input id="companyWebsite" type="url" />
+            </label>
+            <label>
+              Phone
+              <input id="companyPhone" type="tel" />
+            </label>
+            <label>
+              Address
+              <input id="companyAddress" />
+            </label>
+            <label>
+              Industry
+              <input id="companyIndustry" />
+            </label>
+            <label>
+              Company Size
+              <select id="companySize">
+                <option value="">Select</option>
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="201-500">201-500 employees</option>
+                <option value="500+">500+ employees</option>
+              </select>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Save Profile</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
     <!-- Login / Signup Modal -->
     <div id="authModal" class="modal hidden" aria-hidden="true">
       <div class="modal-card">
@@ -330,6 +477,8 @@
     </footer>
   </div>
 
+  <script src="access-control.js"></script>
   <script src="script.js"></script>
+  <script src="employer-portal.js"></script>
 </body>
 </html>
