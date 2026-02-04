@@ -7,20 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <header>
-    <nav class="navbar">
-      <div class="brand" id="EsteJobsBrand" style="display:flex;align-items:center;gap:10px;">
+   <header class="topbar">
+    <div class="brand" id="joblyBrand" style="display:flex;align-items:center;gap:10px;">
       <span style="font-size:20px;font-weight:700;color:var(--accent);">EsteJobs</span>
     </div>
-      <ul class="nav-links">
-  <li><a href="#" class="active">Home</a></li>
-  <li><a href="#">Jobs</a></li>
-  <li><a href="#">Career Advice</a></li>
-  <li><a href="#">Sectors</a></li>
-  <li><a href="#" class="btn-outline">Login</a></li>
-  <li><a href="#" class="btn-red">Sign Up</a></li>
-</ul>
-    </nav>
+    <div class="top-actions">
+      <button id="themeToggle" class="icon-btn" title="Toggle dark mode">🌓</button>
+      <div id="authArea"></div>
+    </div>
   </header>
 
   <div class="slide-container">
