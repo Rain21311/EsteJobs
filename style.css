@@ -86,6 +86,37 @@
   background: #1a1a2e;
   color: var(--text);
 }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-red {
+  background: #e63946;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
 
 /* Hero Section */
 .job-board-hero {
@@ -896,3 +927,4 @@ body.mainApp-active #exitToHome {
     grid-template-columns: 1fr !important;
   }
 }
+
