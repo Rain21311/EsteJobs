@@ -16,24 +16,24 @@ const sampleJobs = [
     address:'J&F Department Store, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info: 'Phone: (02) 8366-8788', hr:'hr@j&f.com'
   },
   {id:'j2', title:'Mc Donald', company:'The Golden Arches Development Corporation', loc:'Borongan City', desc:'"Serving Smiles, One Order at a Time.".',
-    images:["https://tse4.mm.bing.net/th/id/OIP._qPkK1UipkjNSt7yEmlHEAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"],
-    address:'McDonalds, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (02) 8366-8788', hr:'hr@mcdo.com'
+    images:["https://scontent.fceb6-2.fna.fbcdn.net/v/t39.30808-6/486576252_9511589078890267_6544864381093062768_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeERHNWbjbVu_FZQKg4g1qk2bSUz9UTwueJtJTP1RPC54tFb_9H3KMwqjL1mPosQqu2tnGAahwQhBpHR4XPBPHmV&_nc_ohc=1viBN8Kum6oQ7kNvwFKLuej&_nc_oc=AdlBfn8Tytw1MWSPnfLTD02Q-ATvssdd79iAhoFXH3o-ylqZjEe3o2TNkzMG6VSB1zg&_nc_zt=23&_nc_ht=scontent.fceb6-2.fna&_nc_gid=14nFCsSS7zR-h1nNM2n7RQ&oh=00_AfvfTKLyuC9tuOwPFnLk5HILWL2BZjhGGYmeZHi_v9mnRA&oe=6989F037","https://tse4.mm.bing.net/th/id/OIP._qPkK1UipkjNSt7yEmlHEAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    address:'Songco, Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (+63) 9369961402 ', hr:'hr@mcdo.com'
   },
   {id:'j3', title:'Accounting Staff / Branch Secretary', company:'J&F', loc:'Borongan City', desc:'Manages basic accounting tasks and assists with branch administrative work.',
     images:["https://tse3.mm.bing.net/th/id/OIP.e5rN2l_wyVI8_fqdrZ-G1QHaC0?rs=1&pid=ImgDetMain&o=7&rm=3","https://ph-test-11.slatic.net/shop/1e3290f0a5ade7947d1010c2d1968d41.png"],
-    address:'J&F Department Store, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (02) 8366-8788', hr:'hr@j&f.com'
+    address:'J&F Department Store, Songco, Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (02) 8366-8788', hr:'hr@j&f.com'
   },
   {id:'j4', title:'Scuba Diving Instructor / Dive Guide', company:'Lurop Este', loc:'Ando/Divinubo Dive Center', desc:'Teaches diving skills and guides tourists during underwater activities.',
     images:["https://scontent.fcgy2-1.fna.fbcdn.net/v/t39.30808-6/536658874_122123509226927694_206714450335443689_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG9ULPyH6lEQQs0Cy5-hIiKWtfstEUuPEla1-y0RS48SRYA5yJNBB4PZS1xo7_uDu5p85pd9yb1ST38FsWd3scT&_nc_ohc=PRN-iq4_WRQQ7kNvwGOuaXY&_nc_oc=AdmzpbdmAqRTYqdzNQrg5mXJhud7lb0cttTNR3oawCZK8RhQsoehhtBrWsEkBC_Id4LUgiTDbVJMSr7J-2ANJS6_&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=ojGq-iTMqxPlTv0QzRxcPw&oh=00_AfiW2QgBxhL3VjrlmajrQwvNgsmkTqd9WYq7z6on9lDilQ&oe=692B7E4D","https://scontent.fcgy2-2.fna.fbcdn.net/v/t39.30808-6/518372856_122118104168927694_7506096328688728586_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFmVoujb24lVeu2p28-mGjBA73i3Qoh7tgDveLdCiHu2Ii_aSdpMoWRQEkYsJJJO5_DMYAE1QH8BxhtXUY6z1Ri&_nc_ohc=o_sxtXWQqpAQ7kNvwEhbiOM&_nc_oc=AdnGltnb1IHIwXkVNhb_72LKuY_GKr2kEax0pnAS__DMNIxPrOosBG3ug_dYAdSpz5ucpFCIf3gT7GGUW3z0QrtJ&_nc_zt=23&_nc_ht=scontent.fcgy2-2.fna&_nc_gid=RurIxOxWiCawXHpQ4nNwNA&oh=00_Afj-WxarQ1Vqxe9MeSKHJehb56s1ICLWcB3dsJFEzTYftg&oe=692BA762"],
-    address:'Magsaysay street, Maydolong, Philippines', requirements:'Application Letter, Resume', info:'0956 433 3708', hr:'luropeste@gmail.com'
+    address:'Magsaysay street, Maydolong, Philippines', requirements:'Application Letter, Resume', info:'Phone (+63) 956 433 3708', hr:'luropeste@gmail.com'
   },
-  {id:'j5', title:'Mobile Developer', company:'Appify', loc:'Remote', desc:'Build mobile apps for iOS/Android.',
-    images:["https://www.simplilearn.com/ice9/free_resources_article_thumb/Building-a-career-in-Mobile-App-Development.jpg","https://careerkarma.com/blog/wp-content/uploads/2022/01/What-Industry-Hires-The-Most-Mobile-Developers.jpeg"],
-    address:'Remote', requirements:'Flutter, React Native', info:'Mobile app dev', hr:'hr@appify.com'
+  {id:'j5', title:'Jolibee', company:'Jollibee Foods Corp', loc:'Borongan City', desc:'Build mobile apps for iOS/Android.',
+    images:["https://tse1.mm.bing.net/th/id/OIP.PMWI_q83HRWgivKb4JBF9AHaGp?rs=1&pid=ImgDetMain&o=7&rm=3","https://tnt.abante.com.ph/wp-content/uploads/2018/02/jollibee.jpg"],
+    address:'Real St, Borongan City, Eastern Samar', requirements:'Resume, Application Letter,', info:'Phone (+63) 917 502 2978 ', hr:'jolibeeborongan@gmail.com'
   },
-  {id:'j6', title:'DevOps Engineer', company:'CloudOps', loc:'Taguig', desc:'Automate cloud deployments.',
-    images:["https://tse3.mm.bing.net/th/id/OIP.LyiFdNu93D86OwL1FjpuvwHaFA?rs=1&pid=ImgDetMain&o=7&rm=3","https://cdn.careerfoundry.com/en/wp-content/uploads/2023/06/devops_is_the_buzzword_of_the_moment.webp"],
-    address:'Cloud Tower, Taguig', requirements:'AWS, Docker, CI/CD', info:'Cloud automation', hr:'hr@cloudops.com'
+  {id:'j6', title:'Mang Inasal', company:'Jollibee Foods Corp', loc:'Borongan City', desc:'Automate cloud deployments.',
+    images:["https://tse4.mm.bing.net/th/id/OIP.2X1TTd_m0o3J2m9YVbITywHaHa?rs=1&pid=ImgDetMain&o=7&rm=3","https://tse2.mm.bing.net/th/id/OIP.IND0RaR1Uc6mEjVobGiTdwHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    address:'Real St, Borongan City, Eastern Samar', requirements:'Resume, Application Lette', info:'Phone (+63) 917 502 2978', hr:'jolibeeborongan@gmail.com'
   },
   {id:'j7', title:'Full Stack Developer', company:'Stackly', loc:'Remote', desc:'Work on both frontend and backend.',
     images:["https://www.imarkinfotech.com/static/images/full-stack_app-development.jpg","https://tse3.mm.bing.net/th/id/OIP.Pc1r0aQhD8-z-IrMnr_65wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"],
@@ -1226,6 +1226,7 @@ document.addEventListener('click', function(e) {
   }
 
 });
+
 
 
 
