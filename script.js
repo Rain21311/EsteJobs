@@ -15,7 +15,7 @@ const sampleJobs = [
     images:["https://th.bing.com/th/id/OIP.MOSGhaFcG84CleUQUuKZLQHaFj?w=245&h=184&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3","https://ph-test-11.slatic.net/shop/1e3290f0a5ade7947d1010c2d1968d41.png"],
     address:'J&F Department Store, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info: 'Phone: (02) 8366-8788', hr:'hr@j&f.com'
   },
-  {id:'j2', title:'Store Manager', company:'J&F', loc:'Borongan City', desc:'Oversees daily store operations and ensures sales targets are met.',
+  {id:'j2', title:'Mc Donald', company:'The Golden Arches Development Corporation', loc:'Borongan City', desc:'"Serving Smiles, One Order at a Time.".',
     images:["https://ph-test-11.slatic.net/shop/1e3290f0a5ade7947d1010c2d1968d41.png","https://tse1.mm.bing.net/th/id/OIP.y0ChaTc5STXv_C46SiQWvgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3"],
     address:'J&F Department Store, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (02) 8366-8788', hr:'hr@j&f.com'
   },
@@ -1224,4 +1224,5 @@ document.addEventListener('click', function(e) {
     // Optional: scroll to top
     window.scrollTo(0, 0);
   }
+
 });
