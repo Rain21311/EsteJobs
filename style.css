@@ -775,17 +775,15 @@ body{
 }
 
 /* Dark mode */
-:root.dark{
-  --bg: #1a1a2e;
-  --card: #16213e;
-  --text: #eaeaea;
-  --muted: #95a5a6;
-  --accent: #E74C3C;
-  --accent-hover: #c0392b;
-  --danger:#e74c3c;
-  --glass: rgba(255,255,255,0.03);
-  color-scheme: dark;
+
+:root.dark {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
 }
+
 
 /* Show Exit to Home only on main app */
 body.mainApp-active #exitToHome {
@@ -975,6 +973,7 @@ body.mainApp-active #exitToHome {
     grid-template-columns: 1fr !important;
   }
 }
+
 
 
 
