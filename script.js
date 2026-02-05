@@ -16,8 +16,8 @@ const sampleJobs = [
     address:'J&F Department Store, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info: 'Phone: (02) 8366-8788', hr:'hr@j&f.com'
   },
   {id:'j2', title:'Mc Donald', company:'The Golden Arches Development Corporation', loc:'Borongan City', desc:'"Serving Smiles, One Order at a Time.".',
-    images:["https://ph-test-11.slatic.net/shop/1e3290f0a5ade7947d1010c2d1968d41.png","https://tse1.mm.bing.net/th/id/OIP.y0ChaTc5STXv_C46SiQWvgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3"],
-    address:'J&F Department Store, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (02) 8366-8788', hr:'hr@j&f.com'
+    images:[https://scontent.fceb6-3.fna.fbcdn.net/v/t39.30808-6/464911484_122105065178583375_3113524509362538588_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEEoq33UmVnt3KnBrc70zJbkJao1-IR41WQlqjX4hHjVeUCJGE8BYJqytert3cioKHHKVzvr8uVjVtqF3LZuutQ&_nc_ohc=gqOoRiqE08wQ7kNvwFmdSFu&_nc_oc=AdmoMIljWgxq-Ifkf6j9mjEL-mDXstvIVtfkNtJcST0slnGcg0mlztfypSGCEVbFwvI&_nc_zt=23&_nc_ht=scontent.fceb6-3.fna&_nc_gid=FKIqV-c1gi5PQd_nfZdHSA&oh=00_AfsabI-EW5gHzOS3q7d7ObUF-9f6G5M8uIh2pAx3xq9LWA&oe=6989E40F""],
+    address:'McDonalds, Real St., Borongan City, Eastern Samar', requirements:'Application Letter, Resume', info:'Phone: (02) 8366-8788', hr:'hr@mcdo.com'
   },
   {id:'j3', title:'Accounting Staff / Branch Secretary', company:'J&F', loc:'Borongan City', desc:'Manages basic accounting tasks and assists with branch administrative work.',
     images:["https://tse3.mm.bing.net/th/id/OIP.e5rN2l_wyVI8_fqdrZ-G1QHaC0?rs=1&pid=ImgDetMain&o=7&rm=3","https://ph-test-11.slatic.net/shop/1e3290f0a5ade7947d1010c2d1968d41.png"],
@@ -1226,3 +1226,4 @@ document.addEventListener('click', function(e) {
   }
 
 });
+
