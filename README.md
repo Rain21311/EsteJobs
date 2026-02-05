@@ -1,4 +1,4 @@
-WORKIFY: Jobs That Fit Your Life
+EsteJobs: Jobs That Fit Your Life
 
 - All users start as regular users
 - Users can upgrade to employer via profile page
