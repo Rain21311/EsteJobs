@@ -171,7 +171,7 @@
   width: 100%;
   padding: 80px 24px 60px 24px;
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-  color: white;
+  color: #ffffff;
 }
 :root.dark .job-board-hero {
   background: linear-gradient(135deg, #434343 0%, #000000 100%);
@@ -973,6 +973,7 @@ body.mainApp-active #exitToHome {
     grid-template-columns: 1fr !important;
   }
 }
+
 
 
 
